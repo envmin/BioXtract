@@ -5,6 +5,8 @@ fetch('group.csv')
     const headers = lines[0].split(',').map(h => h.trim());
 
     const idxName = headers.indexOf("Name");
+    const idxAff = headers.indexOf("Affiliation");
+    const idxCountry = headers.indexOf("Country");
     const idxRole = headers.indexOf("Role");
     const idxImage = headers.indexOf("Image");
 
@@ -16,7 +18,9 @@ fetch('group.csv')
       const cols = lines[i].split(',').map(c => c.trim());
 
       const name = cols[idxName] || "Unknown";
-      const role = cols[idxRole] || "";
+      const Aff = cols[idxAff] || "";
+      const Country = cols[idxCountry] || "";
+      const Role = cols[idxRole] || "";
       let image = cols[idxImage] || "";
 
       // If image column has only "x" or is empty → use default avatar
@@ -32,7 +36,9 @@ fetch('group.csv')
             <img src="media/${image}" alt="${name}">
         </div>
         <h3>${name}</h3>
-        <p>${role}</p>
+        <p>${Aff}</p>
+        <p>${Country}</p>
+        <p><b>${Role}</b></p>
       `;
 
       teamGrid.appendChild(card);

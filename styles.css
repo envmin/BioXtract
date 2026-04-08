@@ -78,7 +78,7 @@ body {
 .hero {
   position: relative;
   height: 80vh;
-  background: url('media/Shredded.jpg') center/cover no-repeat;
+  background: url('media/bkgd.jpeg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
