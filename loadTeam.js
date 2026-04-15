@@ -9,6 +9,7 @@ fetch('group.csv')
     const idxCountry = headers.indexOf("Country");
     const idxRole = headers.indexOf("Role");
     const idxImage = headers.indexOf("Image");
+    const idxEmail = headers.indexOf("Email");
 
     const teamGrid = document.getElementById("team-grid");
 
@@ -21,6 +22,7 @@ fetch('group.csv')
       const Aff = cols[idxAff] || "";
       const Country = cols[idxCountry] || "";
       const Role = cols[idxRole] || "";
+      const Email = cols[idxEmail] || "";
       let image = cols[idxImage] || "";
 
       // If image column has only "x" or is empty → use default avatar
@@ -39,6 +41,7 @@ fetch('group.csv')
         <p>${Aff}</p>
         <p>${Country}</p>
         <p><b>${Role}</b></p>
+        <p><a href="mailto:${Email}">${Email}</a></p>
       `;
 
       teamGrid.appendChild(card);
