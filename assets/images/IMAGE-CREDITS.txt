@@ -1,0 +1,8 @@
+Image notes
+
+Current site imagery is custom project artwork prepared for BioXtract.
+Replace these files in-place if official project photography becomes available:
+
+hero-bg.jpg
+challenge-ewaste.jpg
+approach-lab.jpg

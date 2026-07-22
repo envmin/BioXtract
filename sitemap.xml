@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://bioxtract.org/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bioxtract.org/assets/images/hero-bg.jpg</image:loc>
+      <image:title>Recovering critical metals from e-waste, biologically</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bioxtract.org/assets/images/challenge-ewaste.jpg</image:loc>
+      <image:title>Mixed electronic waste and circuit-board materials</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bioxtract.org/assets/images/approach-lab.jpg</image:loc>
+      <image:title>BioXtract microbial metal recovery in the laboratory</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bioxtract.org/team</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bioxtract.org/partner</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bioxtract.org/faq</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

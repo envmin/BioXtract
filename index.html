@@ -1,70 +1,920 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioXtract</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BioXtract | Biological Recovery of Critical Metals from E-Waste</title>
+  <meta name="description" content="BioXtract develops a modular microbial platform for selective recovery and transformation of critical metals and rare earth elements from e-waste, PCBs and other waste streams.">
+  <meta name="keywords" content="BioXtract, microbial metal recovery, bioleaching, e-waste recycling, PCB recycling, rare earth elements, REE recovery, critical raw materials, biomineralization, biosorption, biohydrometallurgy, circular economy, SPRIN-D">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="BioXtract">
+  <meta name="theme-color" content="#02141f">
+  <link rel="canonical" href="https://bioxtract.org">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bioxtract.org">
+  <meta property="og:title" content="BioXtract | Biological Recovery of Critical Metals from E-Waste">
+  <meta property="og:description" content="A modular, nature-inspired biotechnology platform for selective recovery of critical metals and rare earth elements from e-waste and other waste streams.">
+  <meta property="og:image" content="https://bioxtract.org/assets/images/hero-bg.jpg">
+  <meta property="og:image:alt" content="Circuit-board fragments in a BioXtract-style liquid treatment process">
+  <meta property="og:site_name" content="BioXtract">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BioXtract | Biological Recovery of Critical Metals">
+  <meta name="twitter:description" content="Turning waste streams into a strategic source of critical raw materials, biologically.">
+  <meta name="twitter:image" content="https://bioxtract.org/assets/images/hero-bg.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('has-js');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bioxtract.org/#organization",
+        "name": "BioXtract",
+        "alternateName": "BioXtract microbial metal recovery platform",
+        "url": "https://bioxtract.org",
+        "logo": "https://bioxtract.org/assets/images/favicon.svg",
+        "image": "https://bioxtract.org/assets/images/hero-bg.jpg",
+        "email": "martyna.glodowska@ru.nl",
+        "description": "BioXtract is a Radboud University spin-out developing a modular microbial platform that selectively recovers and transforms critical metals and rare earth elements from electronic waste, printed circuit boards and other waste streams.",
+        "foundingLocation": { "@type": "Place", "name": "Nijmegen, Netherlands" },
+        "knowsAbout": [
+          "Microbial metal recovery",
+          "Bioleaching",
+          "Biomineralization",
+          "Biosorption",
+          "Rare earth element recovery",
+          "Critical raw materials",
+          "Electronic waste recycling",
+          "Biohydrometallurgy",
+          "Circular economy"
+        ],
+        "parentOrganization": { "@type": "CollegeOrUniversity", "name": "Radboud University", "url": "https://www.ru.nl/en" },
+        "funder": { "@type": "Organization", "name": "SPRIN-D, Federal Agency for Disruptive Innovation", "url": "https://sprind.org" }
+      },
+      {
+        "@type": "ResearchProject",
+        "@id": "https://bioxtract.org/#project",
+        "name": "BioXtract",
+        "url": "https://bioxtract.org",
+        "description": "A modular, nature-inspired biotechnological platform for the selective recovery and transformation of critical metals, including rare earth elements, from electronic waste and other waste streams.",
+        "parentOrganization": { "@id": "https://bioxtract.org/#organization" },
+        "funder": { "@type": "Organization", "name": "SPRIN-D, Federal Agency for Disruptive Innovation", "url": "https://sprind.org" },
+        "about": [
+          "Critical metal recovery",
+          "Rare earth element recovery",
+          "Electronic waste recycling",
+          "Microbial redox processes",
+          "Circular raw materials"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bioxtract.org/#website",
+        "url": "https://bioxtract.org",
+        "name": "BioXtract",
+        "publisher": { "@id": "https://bioxtract.org/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bioxtract.org/#webpage",
+        "url": "https://bioxtract.org",
+        "name": "BioXtract | Biological Recovery of Critical Metals from E-Waste",
+        "isPartOf": { "@id": "https://bioxtract.org/#website" },
+        "about": { "@id": "https://bioxtract.org/#organization" },
+        "primaryImageOfPage": "https://bioxtract.org/assets/images/hero-bg.jpg",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero-title", ".hero-sub"]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!--
+    The people graph below is GENERATED by build.ps1 from content/team.csv;
+    do not hand-edit. The copy committed here is a dev-time placeholder; the
+    deployed upload/index.html always carries the current team.
+  -->
+    <!-- TEAM:JSONLD:START -->
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "Organization",
+                       "@id":  "https://bioxtract.org/#organization",
+                       "employee":  [
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-martyna-glodowska"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-pieter-van-der-velden"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-jessica-venetz"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-suzanne-haaijer-vroomen"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-stian-torset"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-gabriela-mista"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-daniel-wuehtrich"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-mansour-gilasgar"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-francisco-arjona-madue-o"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-annabel-van-driel"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-james-m-byrne"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-bonnie-mcdevitt"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-anna-potysz"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-jeremiah-shuster"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-lucian-staicu"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-dr-elizabeth-j-tomaszewski"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-prof-dr-henning-prommer"
+                                        },
+                                        {
+                                            "@id":  "https://bioxtract.org/#person-prof-dr-mario-zarroca-hernandez"
+                                        }
+                                    ],
+                       "founder":  [
+                                       {
+                                           "@id":  "https://bioxtract.org/#person-dr-martyna-glodowska"
+                                       },
+                                       {
+                                           "@id":  "https://bioxtract.org/#person-pieter-van-der-velden"
+                                       },
+                                       {
+                                           "@id":  "https://bioxtract.org/#person-dr-jessica-venetz"
+                                       }
+                                   ]
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-martyna-glodowska",
+                       "name":  "Dr Martyna Glodowska",
+                       "description":  "An established researcher with extensive scientific expertise and a strong international network across academia and industry. She connects knowledge from different fields and translates scientific insight into innovative applications and process concepts, shaping BioXtract\u0027s technology and research strategy.",
+                       "image":  "https://bioxtract.org/assets/images/team/martyna-glodowska.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "CEO/CSO \u0026 Co-Founder",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-pieter-van-der-velden",
+                       "name":  "Pieter van der Velden",
+                       "description":  "A driven and well-organized leader with a background in biochemistry, currently completing his PhD. He combines scientific expertise with clear communication and a strong vision for the company, leading BioXtract\u0027s development and commercialization efforts.",
+                       "image":  "https://bioxtract.org/assets/images/team/pieter-van-der-velden.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "CEO \u0026 Co-Founder",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-jessica-venetz",
+                       "name":  "Dr Jessica Venetz",
+                       "description":  "She gained a PhD at the intersection of multiple disciplines, giving her the ability to bridge scientific, technical and operational domains. A creative problem-solver who aligns stakeholders and drives the company\u0027s day-to-day operations and growth.",
+                       "image":  "https://bioxtract.org/assets/images/team/jessica-venetz.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "COO \u0026 Co-Founder",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-suzanne-haaijer-vroomen",
+                       "name":  "Dr Suzanne Haaijer-Vroomen",
+                       "description":  "An experienced researcher with extensive practical expertise in laboratory operations and experimental development. She oversees laboratory organization, coordinates procurement and resource management, and trains new team members in methods and procedures.",
+                       "image":  "https://bioxtract.org/assets/images/team/suzanne-haaijer-vroomen.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Co-Lead R\u0026D / Senior Researcher",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-stian-torset",
+                       "name":  "Dr Stian Torset",
+                       "description":  "A dedicated researcher with expertise in bioprospecting and the discovery of novel metabolic pathways. He identifies biological opportunities and translates fundamental discoveries into practical solutions for the company.",
+                       "image":  "https://bioxtract.org/assets/images/team/stian-torset.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Co-Lead R\u0026D / Postdoctoral Researcher",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-gabriela-mista",
+                       "name":  "Gabriela Mista",
+                       "description":  "A careful and dedicated PhD researcher central to the execution and validation of experimental work. Rigorous attention to detail generates the reliable, reproducible data behind BioXtract\u0027s technology development.",
+                       "image":  "https://bioxtract.org/assets/images/team/gabriela-mista.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "PhD Candidate",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-daniel-wuehtrich",
+                       "name":  "Daniel Wuehtrich",
+                       "description":  "A hands-on student research assistant with a background in process engineering. He supports R\u0026D through laboratory experiments and practical research tasks, bringing an engineering perspective to process optimization and scale-up.",
+                       "image":  "https://bioxtract.org/assets/images/team/daniel-wuehtrich.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Student Assistant",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BioXtract"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-mansour-gilasgar",
+                       "name":  "Mansour Gilasgar",
+                       "description":  "With a background in economics, he leads market research and commercial validation. He turns complex market intelligence into clear, actionable visualizations, bridging business strategy and technology development.",
+                       "image":  "https://bioxtract.org/assets/images/team/mansour-gilasgar.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Market Research Lead",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "Radboud University"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-francisco-arjona-madue-o",
+                       "name":  "Dr Francisco Arjona Madueño",
+                       "description":  "Brings extensive experience in knowledge transfer and innovation commercialization, connecting academic research with real-world applications and providing guidance throughout the spinout process.",
+                       "image":  "https://bioxtract.org/assets/images/team/francisco-arjona.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Senior Knowledge Transfer Officer",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "Radboud Innovation Science"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-annabel-van-driel",
+                       "name":  "Dr Annabel van Driel",
+                       "description":  "A supportive project manager who advances the venture through effective coordination and stakeholder engagement, aligning the interests of different parties and keeping innovation activities moving forward.",
+                       "image":  "https://bioxtract.org/assets/images/team/annabel-van-driel.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "jobTitle":  "Senior Grant Advisor",
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "Radboud Innovation Science"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-james-m-byrne",
+                       "name":  "Dr James M. Byrne",
+                       "description":  "An expert in environmental mineralogy and geomicrobiology, especially iron biomineralization and the redox cycling of Fe(II)- and Fe(III)-bearing minerals. He has published on metal recovery using biominerals and specializes in Mössbauer spectroscopy.",
+                       "image":  "https://bioxtract.org/assets/images/team/james-byrne.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "University of Bristol"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-bonnie-mcdevitt",
+                       "name":  "Dr Bonnie McDevitt",
+                       "description":  "Combines expertise in waste stream characterization, isotopic geochemistry and trace element recovery, providing strong applied experience for real-world recovery scenarios.",
+                       "image":  "https://bioxtract.org/assets/images/team/bonnie-mcdevitt.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "USGS"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-anna-potysz",
+                       "name":  "Dr Anna Potysz",
+                       "description":  "Brings extensive experience in geochemistry and microbial influences on metal-bearing rocks, mining slags and metal redox transformations, critical for understanding diverse waste matrices.",
+                       "image":  "https://bioxtract.org/assets/images/team/anna-potysz.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "University of Wrocław"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-jeremiah-shuster",
+                       "name":  "Dr Jeremiah Shuster",
+                       "description":  "Focuses on microbial-metal interactions in natural and engineered settings, strengthening the project\u0027s microbiological and ecological dimensions.",
+                       "image":  "https://bioxtract.org/assets/images/team/jeremiah-shuster.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "University of Western Ontario"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-lucian-staicu",
+                       "name":  "Dr Lucian Staicu",
+                       "description":  "An expert in the anaerobic respiration of metalloid contaminants and biomineralization, particularly for elements such as arsenic and selenium, aligning closely with critical raw material recovery objectives.",
+                       "image":  "https://bioxtract.org/assets/images/team/lucian-staicu.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "BGR (Federal Institute for Geosciences and Natural Resources)"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-dr-elizabeth-j-tomaszewski",
+                       "name":  "Dr Elizabeth J. Tomaszewski",
+                       "description":  "Specializes in geochemical transformations and spectroscopy, essential for a precise mechanistic understanding of metal redox behavior and elemental speciation in complex matrices.",
+                       "image":  "https://bioxtract.org/assets/images/team/elizabeth-tomaszewski.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "USGS"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-prof-dr-henning-prommer",
+                       "name":  "Prof. Dr Henning Prommer",
+                       "description":  "A leader in reactive transport modeling, integrating chemical, biological and physical processes to predict metal mobility and guide process optimization. Co-founder of Ekion, which commercializes electrokinetic in-situ recovery (EK-ISR) of metals, including REEs.",
+                       "image":  "https://bioxtract.org/assets/images/team/henning-prommer.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "University of Western Australia / Ekion"
+                                       }
+                   },
+                   {
+                       "@type":  "Person",
+                       "@id":  "https://bioxtract.org/#person-prof-dr-mario-zarroca-hernandez",
+                       "name":  "Prof. Dr Mario Zarroca Hernandez",
+                       "description":  "Specializes in environmental geology and hydrogeology, focusing on metal recovery and remediation of mining wastes, including acid mine drainage treatment. With 25 years of consulting experience and over 50 scientific papers, he bridges research and applied environmental innovation.",
+                       "image":  "https://bioxtract.org/assets/images/team/mario-zarroca.jpg",
+                       "memberOf":  {
+                                        "@id":  "https://bioxtract.org/#organization"
+                                    },
+                       "affiliation":  {
+                                           "@type":  "Organization",
+                                           "name":  "Autonomous University of Barcelona"
+                                       }
+                   }
+               ]
+}
+  </script>
+  <!-- TEAM:JSONLD:END -->
 </head>
+
 <body>
 
-    <!-- Hero Image -->
+  <!-- Navigation -->
+  <header class="nav" id="nav-header">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="BioXtract home">
+        <img src="assets/images/bioxtract-logo.svg" alt="BioXtract" class="nav-logo-img" width="150" height="60">
+      </a>
 
-    <section class="hero">
-    <h1 class="hero-title">BioXtract</h1>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main">
+        <a href="#challenge" class="nav-link">Challenge</a>
+        <a href="#approach"  class="nav-link">Approach</a>
+        <a href="#process"   class="nav-link">Platform</a>
+        <a href="#team"      class="nav-link">Team</a>
+        <a href="#funding"   class="nav-link">Funding</a>
+        <a href="partner.html" class="nav-link">Partner</a>
+        <a href="faq.html"   class="nav-link">FAQ</a>
+        <a href="partner.html" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" role="img" aria-label="Electronic circuit-board fragments in a liquid treatment process"></div>
+      <div class="container hero-inner">
+        <span class="hero-badge"><span class="dot" aria-hidden="true"></span>Microbial Metal Recovery</span>
+        <h1 class="hero-title">Recovering critical metals from e-waste, <span class="accent">biologically</span>.</h1>
+        <p class="hero-sub">
+          BioXtract uses targeted microbial processes to recover critical metals and rare earth
+          elements from e-waste, PCBs and other waste streams: a modular, low-carbon alternative
+          to conventional chemical and thermal recovery.
+        </p>
+        <div class="hero-actions">
+          <a href="#approach" class="btn btn--primary">
+            How it works
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#team" class="btn btn--ghost">Meet the team</a>
+          <a href="partner.html" class="btn btn--gold">
+            Partnering with us
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Mission Statement -->
-    <section class="mission">
-        <h1>Our Vision</h1>
-        <p style = "text-align: justify; padding-top: 0em;">
-
-            BioXtract transforms complex waste into high-value metal resources through precision biogeochemistry.
-            
-            Our team aims to redefine metal recovery by harnessing the fundamental rules that govern the natural biogeochemical cycling of metals. 
-            At the core of our technology is the replication and acceleration of processes that have shaped Earth's metal cycling for billions of years, and apply them to modern waste streams through:
-        </p>
-        <p style = "text-align: justify; padding-top: 1em">
-
-            <ul>
-            <li style = "text-align: justify">Microbially mediated redox reactions for targeted bioleaching,</li>
-            <li style = "text-align: justify">Biosorption and biomineralization strategies to capture dissolved metals, and</li>
-            <li style = "text-align: justify">Chemically tuneable, stepwise desorption to selectively isolate individual target metals in a resource-efficient manner.</li>
-            </ul>
-        </p>
-
-        <p style = "text-align: justify; padding-top: 1em">
-
-            Our approach is defined by high selectivity and precision, a modular and adaptive system design, and an environmentally responsible 
-            process operating under mild conditions with minimal chemical use. These strengths enable BioXtract to deliver a more cost-effective, 
-            scalable, and sustainable alternative to conventional metal recovery technologies. With deep expertise across biogeochemistry, 
-            microbiology, mineralogy, process engineering, and modelling, the BioXtract team bridges fundamental science and industrial application 
-            to unlock untapped sources of critical raw materials and turn waste into a strategic resource.
-
-            
-        </p>
+    <!-- Challenge -->
+    <section class="section" id="challenge" aria-labelledby="challenge-h">
+      <div class="container">
+        <div class="split">
+          <div class="split-media fade-up">
+            <img src="assets/images/challenge-ewaste.jpg" alt="Mixed electronic waste and circuit-board materials" loading="lazy">
+            <span class="tag">The feedstock</span>
+          </div>
+          <div class="split-body fade-up">
+            <span class="eyebrow">The Challenge</span>
+            <h2 class="h2" id="challenge-h">The richest ore is the one we throw away</h2>
+            <p>
+              Electronic waste contains high concentrations of gold, copper and rare earth elements,
+              far denser than most natural ores. Yet the majority of it is never recovered, while
+              demand for these same critical metals keeps climbing.
+            </p>
+            <p>
+              Conventional recovery relies on energy-intensive smelting or aggressive chemical
+              leaching. BioXtract takes a different route: letting biology do the selective work,
+              under mild conditions, with minimal chemical input.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="num">62<span class="accent">M</span></div>
+                <div class="label">tons of e-waste generated globally each year</div>
+              </div>
+              <div class="stat">
+                <div class="num">&lt; 25<span class="accent">%</span></div>
+                <div class="label">is formally collected and recycled</div>
+              </div>
+            </div>
+            <p class="stat-note">Source: UN Global E-waste Monitor, 2024.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Team Grid -->
-    <section class="team">
-            <h2>Team</h2>
-            <div id="team-grid" class="team-grid"></div>
+    <!-- Approach -->
+    <section class="section bg-surface" id="approach" aria-labelledby="approach-h">
+      <div class="container">
+        <div class="split split--reverse" style="margin-bottom:4rem">
+          <div class="split-media fade-up">
+            <img src="assets/images/approach-lab.jpg" alt="Researcher pipetting liquid onto circuit-board fragments in a laboratory dish" loading="lazy">
+            <span class="tag">In the lab</span>
+          </div>
+          <div class="split-body fade-up">
+            <span class="eyebrow">Our Approach</span>
+            <h2 class="h2" id="approach-h">Replicating nature's metal cycle at industrial speed</h2>
+            <p>
+              For billions of years, microorganisms have dissolved, concentrated and re-deposited
+              metals through natural biogeochemical cycles. BioXtract replicates and accelerates
+              those same mechanisms, then directs them at modern waste streams.
+            </p>
+            <p>
+              The result is a process defined by high selectivity, a modular and adaptive design,
+              and an environmentally responsible footprint, bridging fundamental biogeochemistry
+              and real industrial application.
+            </p>
+            <p>
+              Beyond recovery, BioXtract is designed for directed metal transformation: waste can
+              become a route to functional precursors for permanent magnets, luminescent materials
+              and other high-value applications.
+            </p>
+          </div>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar fade-up">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>
+            </div>
+            <h3>High selectivity</h3>
+            <p>Targeted recovery of specific critical metals and REEs, not broad-spectrum leaching.</p>
+          </div>
+          <div class="pillar fade-up" style="transition-delay:80ms">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </div>
+            <h3>Modular by design</h3>
+            <p>Each stage runs independently or slots into existing recycling and remediation lines.</p>
+          </div>
+          <div class="pillar fade-up" style="transition-delay:160ms">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-2 8-6 8-12V5l-8-3-8 3v5c0 6 3 10 8 12z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Low-carbon &amp; mild</h3>
+            <p>Operates under mild conditions with minimal chemicals, and regenerates its materials.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Platform -->
+    <section class="section bg-dark process-section" id="process" aria-labelledby="process-h">
+      <div class="container">
+        <div class="platform-head center">
+          <span class="eyebrow">The Platform</span>
+          <h2 class="h2" id="process-h">Four stages. One closed loop.</h2>
+          <p class="lead">
+            The BioXtract platform takes critical-metal-bearing waste in and returns refined materials out.
+            Each stage is self-contained and can slot into existing recycling lines, or the four chain
+            together into a continuous, closed-loop system with no valuable material wasted.
+          </p>
+        </div>
 
-    <section class="mission">
-        <h2>Funding</h2>
-        <p>
-            This project is supported through funding from the SPRIN-D Tech Metal Transformation Challenge.
-        </p>
-        <p>
-            <a href="https://sprind.org/en/actions/challenges/tech-metal", target="_blank">https://sprind.org/en/actions/challenges/tech-metal</a>
-        </p>
+        <div class="module-loop fade-up" role="list" aria-label="BioXtract platform stages">
+          <svg class="module-loop-line" viewBox="0 0 1180 374" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M34 50 C34 28 52 14 78 14 H575" />
+            <path d="M602 14 H1102 C1128 14 1146 32 1146 58 V316 C1146 342 1128 360 1102 360 H602" />
+            <path d="M575 360 H78 C52 360 34 342 34 316 V58" />
+            <path class="loop-arrow loop-arrow-top" d="M572 7 L584 14 L572 21" />
+            <path class="loop-arrow loop-arrow-bottom" d="M608 353 L596 360 L608 367" />
+          </svg>
+
+          <article class="module" role="listitem">
+            <img class="module-photo" src="assets/images/challenge-ewaste.jpg" alt="" loading="lazy">
+            <div class="module-step">01</div>
+            <svg class="module-icon" viewBox="0 0 72 72" aria-hidden="true">
+              <path d="M36 5 56 14v16c0 16-8 27-20 35-12-8-20-19-20-35V14L36 5Z" />
+              <path d="M24 31h24L39 42v10l-6 4V42L24 31Z" />
+              <path d="M30 18h.1M36 16h.1M42 20h.1M29 24h.1M45 27h.1" />
+            </svg>
+            <h3>Pre-treatment</h3>
+            <p>E-waste and PCBs need only minor pre-treatment: removing protective layers and grinding to usable pieces of about 5 x 5 mm, keeping energy costs and waste low.</p>
+            <div class="module-bar"><span style="width:25%"></span></div>
+          </article>
+
+          <article class="module" role="listitem">
+            <img class="module-photo" src="assets/images/approach-lab.jpg" alt="" loading="lazy">
+            <div class="module-step">02</div>
+            <svg class="module-icon" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="15" />
+              <circle cx="48" cy="22" r="4" />
+              <circle cx="18" cy="45" r="3" />
+              <path d="M36 13V7M36 65v-6M13 36H7M65 36h-6M20 20l-4-4M56 56l-4-4M52 20l4-4M16 56l4-4" />
+              <path d="M25 36c4-7 12-10 20-6" />
+              <path d="M23 53c-2 4-5 7-9 8M51 16c4-3 8-4 12-3" />
+              <path d="M13 28h4M55 42h5M29 9v4M44 60v4" />
+            </svg>
+            <h3>Microbial mobilization</h3>
+            <p>Microbial redox reactions act as catalysts to release critical elements, avoiding the high energy and harsh chemicals of traditional hydrometallurgy.</p>
+            <div class="module-bar"><span style="width:50%"></span></div>
+          </article>
+
+          <article class="module" role="listitem">
+            <img class="module-photo" src="assets/images/hero-bg.jpg" alt="" loading="lazy">
+            <div class="module-step">03</div>
+            <svg class="module-icon" viewBox="0 0 72 72" aria-hidden="true">
+              <path d="M14 22 22 14 30 22 22 30 14 22Z" />
+              <path d="M42 22 50 14 58 22 50 30 42 22Z" />
+              <path d="M28 36 36 28 44 36 36 44 28 36Z" />
+              <path d="M14 50 22 42 30 50 22 58 14 50Z" />
+              <path d="M42 50 50 42 58 50 50 58 42 50Z" />
+              <path d="M15 15 10 10M57 15l5-5M15 57l-5 5M57 57l5 5" />
+              <path d="M36 12v8M36 52v8M12 36h8M52 36h8" />
+            </svg>
+            <h3>Selective capture</h3>
+            <p>Targeted biosorption and biomineralization concentrate the leached metals, enriching specific elements by their affinity to organic or inorganic surfaces.</p>
+            <div class="module-bar"><span style="width:75%"></span></div>
+          </article>
+
+          <article class="module" role="listitem">
+            <img class="module-photo" src="assets/images/approach-lab.jpg" alt="" loading="lazy">
+            <div class="module-step">04</div>
+            <svg class="module-icon" viewBox="0 0 72 72" aria-hidden="true">
+              <path d="M36 6C48 21 56 34 56 45c0 13-9 21-20 21s-20-8-20-21C16 34 24 21 36 6Z" />
+              <path d="M36 42c5 5 7 8 7 12 0 4-3 7-7 7s-7-3-7-7c0-4 2-7 7-12Z" />
+            </svg>
+            <h3>Controlled release</h3>
+            <p>Chemical triggers (pH, ionic strength, competitive ligands and redox manipulation) drive fractional recovery. Biominerals and biosorbents are then regenerated and reused.</p>
+            <div class="module-bar"><span style="width:100%"></span></div>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <!-- Team -->
+    <section class="section" id="team" aria-labelledby="team-h">
+      <div class="container">
+        <div class="team-head center">
+          <span class="eyebrow">The Team</span>
+          <h2 class="h2" id="team-h">The people behind the science</h2>
+          <p class="lead">
+            BioXtract is an international, multidisciplinary team of environmental scientists united by
+            a common goal: to tackle the growing challenges of waste management and contribute to the
+            green economy through innovative waste valorization.
+          </p>
+          <p class="lead">
+            The team brings together (geo)microbiologists with a long history of working with metals and
+            metalloids, and with the microbes that respire them into biominerals, alongside geologists
+            and geochemists expert in REE biogeochemistry, redox transformation and resource recovery,
+            and modelers who predict the behavior and mobility of critical metals. Combined with strong
+            process-engineering expertise, close industry connections and access to world-class laboratory
+            facilities, it spans four continents.
+          </p>
+        </div>
 
-<script src="loadTeam.js"></script>
+        <!--
+          Team entries are managed in content/team.csv, the single
+          source of truth. In the browser main.js renders these cards from it.
+          build.ps1 additionally bakes the same cards into upload/index.html as
+          static HTML (replacing the TEAM:AUTO block below) so search engines and
+          AI crawlers that do not execute JavaScript still read the full team.
+        -->
+        <div class="team-groups" id="team-root" data-team-scope="home">
+          <!-- TEAM:AUTO:START -->
+          <section class="team-group">
+            <h3 class="team-group-title">Core Team</h3>
+            <div class="team-grid" role="list" aria-label="Core Team">
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/martyna-glodowska.jpg" alt="Portrait of Dr Martyna Glodowska" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Martyna Glodowska</h4>
+                  <span class="team-role">CEO/CSO &amp; Co-Founder</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">An established researcher with extensive scientific expertise and a strong international network across academia and industry. She connects knowledge from different fields and translates scientific insight into innovative applications and process concepts, shaping BioXtract&#39;s technology and research strategy.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/pieter-van-der-velden.jpg" alt="Portrait of Pieter van der Velden" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Pieter van der Velden</h4>
+                  <span class="team-role">CEO &amp; Co-Founder</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">A driven and well-organized leader with a background in biochemistry, currently completing his PhD. He combines scientific expertise with clear communication and a strong vision for the company, leading BioXtract&#39;s development and commercialization efforts.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/jessica-venetz.jpg" alt="Portrait of Dr Jessica Venetz" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Jessica Venetz</h4>
+                  <span class="team-role">COO &amp; Co-Founder</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">She gained a PhD at the intersection of multiple disciplines, giving her the ability to bridge scientific, technical and operational domains. A creative problem-solver who aligns stakeholders and drives the company&#39;s day-to-day operations and growth.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/suzanne-haaijer-vroomen.jpg" alt="Portrait of Dr Suzanne Haaijer-Vroomen" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Suzanne Haaijer-Vroomen</h4>
+                  <span class="team-role">Co-Lead R&amp;D / Senior Researcher</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">An experienced researcher with extensive practical expertise in laboratory operations and experimental development. She oversees laboratory organization, coordinates procurement and resource management, and trains new team members in methods and procedures.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/stian-torset.jpg" alt="Portrait of Dr Stian Torset" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Stian Torset</h4>
+                  <span class="team-role">Co-Lead R&amp;D / Postdoctoral Researcher</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">A dedicated researcher with expertise in bioprospecting and the discovery of novel metabolic pathways. He identifies biological opportunities and translates fundamental discoveries into practical solutions for the company.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/gabriela-mista.jpg" alt="Portrait of Gabriela Mista" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Gabriela Mista</h4>
+                  <span class="team-role">PhD Candidate</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">A careful and dedicated PhD researcher central to the execution and validation of experimental work. Rigorous attention to detail generates the reliable, reproducible data behind BioXtract&#39;s technology development.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/daniel-wuehtrich.jpg" alt="Portrait of Daniel Wuehtrich" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Daniel Wuehtrich</h4>
+                  <span class="team-role">Student Assistant</span>
+                  <p class="team-affiliation">BioXtract</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">A hands-on student research assistant with a background in process engineering. He supports R&amp;D through laboratory experiments and practical research tasks, bringing an engineering perspective to process optimization and scale-up.</p>
+                </div></div>
+              </article>
+            </div>
+          </section>
+          <section class="team-group">
+            <h3 class="team-group-title">Valorization Support</h3>
+            <div class="team-grid" role="list" aria-label="Valorization Support">
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/mansour-gilasgar.jpg" alt="Portrait of Mansour Gilasgar" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Mansour Gilasgar</h4>
+                  <span class="team-role">Market Research Lead</span>
+                  <p class="team-affiliation">Radboud University</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">With a background in economics, he leads market research and commercial validation. He turns complex market intelligence into clear, actionable visualizations, bridging business strategy and technology development.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/francisco-arjona.jpg" alt="Portrait of Dr Francisco Arjona Madueño" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Francisco Arjona Madueño</h4>
+                  <span class="team-role">Senior Knowledge Transfer Officer</span>
+                  <p class="team-affiliation">Radboud Innovation Science</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">Brings extensive experience in knowledge transfer and innovation commercialization, connecting academic research with real-world applications and providing guidance throughout the spinout process.</p>
+                </div></div>
+              </article>
+              <article class="team-card fade-up" role="listitem">
+                <div class="card-inner"><div class="card-face card-front">
+                  <div class="team-photo-wrap"><img src="assets/images/team/annabel-van-driel.jpg" alt="Portrait of Dr Annabel van Driel" class="team-photo" width="400" height="400" loading="lazy" decoding="async"></div>
+                  <h4 class="team-name">Dr Annabel van Driel</h4>
+                  <span class="team-role">Senior Grant Advisor</span>
+                  <p class="team-affiliation">Radboud Innovation Science</p>
+                  <p class="team-country">Netherlands</p>
+                  <p class="team-static-bio">A supportive project manager who advances the venture through effective coordination and stakeholder engagement, aligning the interests of different parties and keeping innovation activities moving forward.</p>
+                </div></div>
+              </article>
+            </div>
+          </section>
+          <!-- TEAM:AUTO:END -->
+        </div>
 
+        <div class="team-cta center">
+          <a href="team.html" class="btn btn--dark">
+            All team members
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funding -->
+    <section class="section bg-surface" id="funding" aria-labelledby="funding-h">
+      <div class="container">
+        <div class="funding">
+          <span class="eyebrow">Funding</span>
+          <h2 class="h2" id="funding-h">Backed by SPRIN-D</h2>
+          <p>
+            BioXtract is supported through the <strong>SPRIN-D Tech Metal Transformation Challenge</strong>,
+            run by Germany's Federal Agency for Disruptive Innovation, which backs breakthrough technologies
+            for critical raw-material recovery and a resilient, circular industrial future.
+          </p>
+          <a href="https://sprind.org/en/actions/challenges/tech-metal" target="_blank" rel="noopener noreferrer" class="btn btn--dark">
+            View the SPRIN-D challenge
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" aria-label="Project partners and funder">
+      <div class="container partners-inner">
+        <p class="partners-label">Project ecosystem</p>
+        <div class="partner-logos" role="list">
+          <a class="partner-logo partner-logo--radboud" href="https://www.ru.nl/en" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Radboud University">
+            <span class="partner-mark">Radboud</span>
+            <span class="partner-sub">University</span>
+          </a>
+          <a class="partner-logo partner-logo--sprind" href="https://sprind.org/en" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="SPRIN-D">
+            <span class="partner-mark">SPRIN-D</span>
+            <span class="partner-sub">Federal Agency for Disruptive Innovation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">Bio<b>Xtract</b></div>
+        <p class="footer-tagline">Turning electronic waste into a strategic source of critical raw materials, biologically.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#challenge">Challenge</a>
+        <a href="#approach">Approach</a>
+        <a href="#process">Platform</a>
+        <a href="#team">Team</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="mailto:martyna.glodowska@ru.nl">Contact the team</a>
+        <a href="partner.html">Partner with us</a>
+        <a class="footer-social" href="https://www.linkedin.com/company/bioxtract-technology/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn ↗</a>
+        <a href="https://sprind.org/en/actions/challenges/tech-metal" target="_blank" rel="noopener noreferrer">SPRIN-D Challenge ↗</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">© <span id="year">2025</span> BioXtract. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Failsafe: if the animation JS doesn't run, still reveal any on-screen content
+    // (below-the-fold items keep animating on scroll).
+    addEventListener('load', function () {
+      setTimeout(function () {
+        var vh = window.innerHeight;
+        document.querySelectorAll('.fade-up:not(.visible)').forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < vh && r.bottom > 0) el.classList.add('visible');
+        });
+      }, 1200);
+    });
+  </script>
 </body>
-
 </html>

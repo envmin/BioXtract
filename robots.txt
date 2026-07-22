@@ -1,0 +1,97 @@
+# robots.txt - https://bioxtract.org
+# BioXtract is a public research project: we want this site indexed by search
+# engines AND readable by AI answer engines, so everything is open to everyone.
+
+User-agent: *
+Allow: /
+
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# --- AI answer / generative engines -------------------------------------
+# Named explicitly: several of these ignore or de-prioritize a bare wildcard,
+# and being cited in AI answers is a goal for us, not a risk.
+
+# OpenAI - ChatGPT browsing, search index, and training crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic - Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / Vertex grounding
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Microsoft Copilot
+User-agent: Bingbot-Extended
+Allow: /
+
+# Common Crawl (feeds many open models)
+User-agent: CCBot
+Allow: /
+
+# Mistral, You.com, Amazon, Cohere, Diffbot, Bytedance
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://bioxtract.org/sitemap.xml
