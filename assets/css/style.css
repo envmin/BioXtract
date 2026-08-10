@@ -25,9 +25,10 @@
   --max:   1180px;
   --nav-h: 64px;
 
-  /* "opens in a new tab" arrow, same glyph as the outbound buttons. Used as a
-     mask so it can take its colour from the link it sits next to. */
-  --icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M9 7h8v8'/%3E%3C/svg%3E");
+  /* "Opens in a new window": the box-with-escaping-arrow convention. A bare
+     diagonal arrow reads too much like the Mars symbol at this size. Used as a
+     mask so it takes its colour from the link it sits next to. */
+  --icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 13.5V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5.5'/%3E%3Cpath d='M14 4h6v6'/%3E%3Cpath d='M10 14 19.4 4.6'/%3E%3C/svg%3E");
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -525,7 +526,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 }
 .team-name-link::after {
   content: ""; display: inline-block;
-  width: .62em; height: .62em; margin-left: .3em;
+  width: .72em; height: .72em; margin-left: .32em;
   vertical-align: baseline;
   background-color: var(--cyan);
   -webkit-mask: var(--icon-external) no-repeat center / contain;
