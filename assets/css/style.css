@@ -452,6 +452,8 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .team-card:not(.flipped):hover .card-front {
   border-color: rgba(8,127,122,.34); box-shadow: var(--shadow); transform: translateY(-2px);
 }
+/* The turned-away face keeps its profile link, so main.js also marks it inert:
+   an invisible link that can still be tabbed to is a keyboard trap. */
 .team-card.flipped .card-front {
   opacity: 0; transform: scaleX(.88);
   pointer-events: none;

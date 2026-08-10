@@ -76,7 +76,7 @@ function teamCard(m, i) {
             ${m.email ? `<a class="team-email" href="mailto:${esc(m.email)}" onclick="event.stopPropagation()">${esc(m.email)}</a>` : ''}
             <span class="flip-hint" aria-hidden="true">↻ flip</span>
           </div>
-          <div class="card-face card-back" aria-hidden="true">
+          <div class="card-face card-back" aria-hidden="true" inert>
             <div class="back-avatar">
               <img src="${src}" alt="" width="400" height="400" loading="lazy" decoding="async" onerror="${fallback}">
             </div>
@@ -127,9 +127,13 @@ function renderTeam(members) {
 
   grid.querySelectorAll('.team-card').forEach(card => {
     card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
-      const back = card.querySelector('.card-back');
-      if (back) back.setAttribute('aria-hidden', card.classList.contains('flipped') ? 'false' : 'true');
+      const flipped = card.classList.toggle('flipped');
+      // Both faces carry the same profile link, so the one facing away has to be
+      // taken out of the tab order and the accessibility tree, not just faded.
+      const back  = card.querySelector('.card-back');
+      const front = card.querySelector('.card-front');
+      if (back)  { back.setAttribute('aria-hidden', flipped ? 'false' : 'true'); back.inert = !flipped; }
+      if (front) { front.setAttribute('aria-hidden', flipped ? 'true' : 'false'); front.inert = flipped; }
     });
   });
 
