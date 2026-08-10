@@ -1,10 +1,11 @@
 # BioXtract
 
 > BioXtract is a Radboud University spin-out developing a modular, nature-inspired
-> biotechnology platform that uses targeted microbial processes to selectively recover
-> and transform critical metals and rare earth elements (REEs) from electronic waste,
-> printed circuit boards and other waste streams: a low-carbon alternative to
-> conventional smelting and aggressive chemical leaching.
+> biotechnology platform that uses targeted microbial bioleaching, sorption and
+> selective dilution to recover and separate critical metals and rare earth elements
+> (REEs) from electronic waste, printed circuit boards, mining effluents and other
+> waste streams: a low-carbon alternative to conventional smelting and aggressive
+> chemical leaching.
 
 - **Website:** https://bioxtract.org
 - **Contact:** martyna.glodowska@ru.nl
@@ -16,7 +17,7 @@
 ## What BioXtract does
 
 BioXtract recovers critical metals and rare earth elements from e-waste, printed
-circuit boards (PCBs) and other suitable waste streams. Electronic waste contains
+circuit boards (PCBs), mining effluents and other suitable waste streams. Electronic waste contains
 higher concentrations of gold, copper and REEs than most natural ores, yet most of it
 is never recovered. Conventional recovery depends on energy-intensive smelting or
 aggressive chemical leaching; BioXtract instead lets microbial redox chemistry do the
@@ -26,20 +27,18 @@ Beyond recovery, the platform is designed for *directed metal transformation*: w
 can become a route to functional precursors for permanent magnets, luminescent
 materials and other high-value applications.
 
-## The platform: four stages, one closed loop
+## The platform: four stages, modular by design
 
-1. **Pre-treatment**. E-waste and PCBs need only minor pre-treatment: removing
-   protective layers and grinding to pieces of roughly 5 x 5 mm, keeping energy costs
-   and waste low.
+1. **Pre-treatment**. E-waste and PCBs need only minor pre-treatment, keeping energy
+   costs and waste low.
 2. **Microbial mobilization**. Microbial redox reactions act as catalysts to release
-   critical elements, avoiding the high energy input and harsh chemicals of
-   traditional hydrometallurgy.
-3. **Selective capture**. Targeted biosorption and biomineralization concentrate the
-   leached metals, enriching specific elements by their affinity to organic or
-   inorganic surfaces.
-4. **Controlled release**. Chemical triggers (pH, ionic strength, competitive ligands
-   and redox manipulation) drive fractional recovery. Biominerals and biosorbents are
-   then regenerated and reused.
+   critical elements from solid waste, avoiding the high energy and harsh chemicals
+   consumption of traditional hydrometallurgy.
+3. **Selective capture**. Targeted (bio)sorption recovers the leached metals,
+   enriching specific elements by their affinity to organic or inorganic sorbents.
+4. **Controlled separation**. Geochemical triggers (pH, ionic strength, competitive
+   ligands and redox manipulation) drive sequential recovery. Organic and mineral
+   sorbents are then regenerated and reused.
 
 Each stage is self-contained and can slot into existing recycling lines, or the four
 can chain into a continuous closed-loop system.
@@ -49,14 +48,14 @@ can chain into a continuous closed-loop system.
 - 62 million tons of e-waste are generated globally each year, and less than 25% is
   formally collected and recycled. (Source: UN Global E-waste Monitor, 2024.)
 - BioXtract's three defining properties are high selectivity, modular design, and
-  low-carbon operation under mild conditions.
+  resourceful, low-carbon operation under mild conditions.
 - The team spans four continents and combines (geo)microbiology, biogeochemistry,
   mineralogy, reactive transport modeling, process engineering and knowledge transfer.
 
 ## The team
 
-Leadership: Dr Martyna Glodowska (CEO/CSO & Co-Founder), Pieter van der Velden (CEO &
-Co-Founder), Dr Jessica Venetz (COO & Co-Founder). R&D is co-led by
+Managing Team: Dr Martyna Glodowska (CEO/CSO & Co-Founder), Pieter van der Velden
+(CEO & Co-Founder), Dr Jessica Venetz (COO & Co-Founder). The R&D Team is co-led by
 Dr Suzanne Haaijer-Vroomen and Dr Stian Torset.
 
 BioXtract is advised by a Scientific Board (Dr James M. Byrne, University of Bristol;

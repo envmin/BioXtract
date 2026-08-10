@@ -52,6 +52,11 @@ function teamCard(m, i) {
   const name = esc(m.name || 'Unknown');
   const bio = esc((m.bio || '').trim() || "Contributing to BioXtract's interdisciplinary research program.");
   const fallback = `this.onerror=null;this.src='${DEFAULT_IMG}'`;
+  // Optional profile link (the "link" CSV column). Only http(s) URLs are honored.
+  const link = /^https?:\/\//i.test((m.link || '').trim()) ? esc(m.link.trim()) : '';
+  const nameHtml = link
+    ? `<a class="team-name-link" href="${link}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="${name}, profile page">${name}</a>`
+    : name;
 
   return `
       <article class="team-card fade-up" style="transition-delay:${(i % 4) * 60}ms" role="listitem"
@@ -62,7 +67,7 @@ function teamCard(m, i) {
               <img src="${src}" alt="Portrait of ${name}" class="team-photo"
                    width="400" height="400" loading="lazy" decoding="async" onerror="${fallback}">
             </div>
-            <h4 class="team-name">${name}</h4>
+            <h4 class="team-name">${nameHtml}</h4>
             ${m.role ? `<span class="team-role">${esc(m.role)}</span>` : ''}
             ${m.affiliation ? `<p class="team-affiliation">${esc(m.affiliation)}</p>` : ''}
             ${m.country ? `<p class="team-country">${esc(m.country)}</p>` : ''}

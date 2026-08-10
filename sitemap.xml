@@ -4,12 +4,12 @@
 
   <url>
     <loc>https://bioxtract.org/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://bioxtract.org/assets/images/hero-bg.jpg</image:loc>
-      <image:title>Recovering critical metals from e-waste, biologically</image:title>
+      <image:title>Recovering critical metals from waste using precision biogeochemistry</image:title>
     </image:image>
     <image:image>
       <image:loc>https://bioxtract.org/assets/images/challenge-ewaste.jpg</image:loc>
@@ -23,21 +23,21 @@
 
   <url>
     <loc>https://bioxtract.org/team</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://bioxtract.org/partner</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://bioxtract.org/faq</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
