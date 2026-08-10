@@ -54,8 +54,10 @@ function teamCard(m, i) {
   const fallback = `this.onerror=null;this.src='${DEFAULT_IMG}'`;
   // Optional profile link (the "link" CSV column). Only http(s) URLs are honored.
   const link = /^https?:\/\//i.test((m.link || '').trim()) ? esc(m.link.trim()) : '';
+  // Same markup on the front and the back of the card, so the profile is one
+  // click away whichever side the visitor is looking at.
   const nameHtml = link
-    ? `<a class="team-name-link" href="${link}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="${name}, profile page">${name}</a>`
+    ? `<a class="team-name-link" href="${link}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="${name}, profile page (opens in a new tab)">${name}</a>`
     : name;
 
   return `
@@ -78,9 +80,8 @@ function teamCard(m, i) {
             <div class="back-avatar">
               <img src="${src}" alt="" width="400" height="400" loading="lazy" decoding="async" onerror="${fallback}">
             </div>
-            <p class="back-name">${name}</p>
+            <p class="back-name">${nameHtml}</p>
             ${m.affiliation ? `<p class="back-affil">${esc(m.affiliation)}</p>` : ''}
-            ${m.country ? `<p class="back-country">${esc(m.country)}</p>` : ''}
             <p class="back-bio">${bio}</p>
             <span class="flip-hint back-flip-hint" aria-hidden="true">↺ flip back</span>
           </div>

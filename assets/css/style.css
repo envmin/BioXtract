@@ -24,6 +24,10 @@
 
   --max:   1180px;
   --nav-h: 64px;
+
+  /* "opens in a new tab" arrow, same glyph as the outbound buttons. Used as a
+     mask so it can take its colour from the link it sits next to. */
+  --icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M9 7h8v8'/%3E%3C/svg%3E");
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -410,6 +414,9 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 }
 
 .team-head { margin-bottom: 3.5rem; }
+/* Heading stays centred, body copy does not: these two paragraphs are long
+   enough that centring every line hurts readability. */
+.team-head .lead { text-align: left; }
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.15rem; grid-auto-rows: 1fr; }
 
 /* Team groups (Managing Team / R&D Team / Valorization Support / Scientific Board /
@@ -425,7 +432,11 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
   content: ""; flex: 1; height: 1px; background: var(--line);
 }
 
-.team-card { cursor: pointer; border-radius: var(--radius); display: flex; }
+/* The back of a card is absolutely positioned, so it contributes nothing to the
+   row height and the longest bios used to run past the bottom border. The floor
+   below is measured: it is what the longest current bio needs, plus headroom for
+   bios that grow. Anything longer still degrades safely (see .card-back). */
+.team-card { cursor: pointer; border-radius: var(--radius); display: flex; min-height: 380px; }
 .card-inner { position: relative; border-radius: var(--radius); flex: 1; }
 
 .card-face { border-radius: var(--radius); }
@@ -434,10 +445,10 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
   height: 100%;
   background: var(--white); border: 1px solid var(--line);
   padding: 2.1rem 1.4rem 1.5rem; text-align: center;
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; justify-content: center;
   transition: border-color var(--t), box-shadow var(--t), transform .28s var(--ease), opacity .28s var(--ease);
 }
-.card-front .flip-hint { margin-top: auto; }
+.card-front .flip-hint { margin-top: 1.15rem; }
 .team-card:not(.flipped):hover .card-front {
   border-color: rgba(8,127,122,.34); box-shadow: var(--shadow); transform: translateY(-2px);
 }
@@ -451,9 +462,15 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
   position: absolute; inset: 0;
   background: linear-gradient(155deg, var(--dark) 0%, #173c35 100%);
   border: 1px solid rgba(255,255,255,.12);
-  padding: 1.5rem 1.25rem;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; gap: .35rem;
+  padding: 1.3rem 1.15rem 1.25rem;
+  display: flex; flex-direction: column; align-items: center;
+  /* "safe" keeps a bio that is taller than the card from spilling past the
+     border (the longest bio used to end level with the bottom edge): it falls
+     back to top-aligned + scrollable instead of centring the overflow. */
+  justify-content: center;
+  justify-content: safe center;
+  overflow-y: auto; overscroll-behavior: contain;
+  text-align: center; gap: .25rem;
   opacity: 0; transform: scaleX(.88); pointer-events: none;
   transition: transform .24s var(--ease) .22s, opacity .24s var(--ease) .22s;
 }
@@ -462,24 +479,30 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
   transition: transform .28s var(--ease) .22s, opacity .28s var(--ease) .22s;
 }
 .back-avatar {
-  width: 60px; height: 60px; border-radius: 50%; overflow: hidden;
-  border: 2px solid rgba(185,133,43,.46); margin-bottom: .75rem; flex-shrink: 0;
+  width: 54px; height: 54px; border-radius: 50%; overflow: hidden;
+  border: 2px solid rgba(185,133,43,.46); margin-bottom: .55rem; flex-shrink: 0;
 }
 .back-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .back-name { font-size: .96rem; font-weight: 700; color: #fff; }
 .back-affil { font-size: .78rem; color: rgba(255,255,255,.6); line-height: 1.4; }
-.back-country { font-size: .74rem; color: rgba(255,255,255,.4); }
+/* Ragged-right, not centred: centred prose forces the eye to hunt for the start
+   of every line, which is what made the longer bios hard to read. */
 .back-bio {
-  font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.5;
-  margin-top: .6rem; font-style: italic;
+  font-size: .75rem; color: rgba(255,255,255,.62); line-height: 1.5;
+  margin-top: .5rem; font-style: italic;
+  text-align: left; align-self: stretch;
 }
+
+/* The name on the back of the card links out too. */
+.card-back .team-name-link::after { background-color: rgba(185,133,43,.92); }
+.card-back .team-name-link:hover, .card-back .team-name-link:focus-visible { color: var(--gold); }
 .flip-hint {
   display: block; font-size: .68rem; font-weight: 700; letter-spacing: 0;
   color: var(--faint); margin-top: .85rem; opacity: .65;
   transition: opacity var(--t);
 }
 .team-card:hover .flip-hint { opacity: 1; color: var(--cyan); }
-.back-flip-hint { color: rgba(255,255,255,.35); margin-top: .75rem; }
+.back-flip-hint { color: rgba(255,255,255,.35); margin-top: .55rem; }
 .team-card:hover .back-flip-hint { color: rgba(185,133,43,.82); }
 
 .team-photo-wrap {
@@ -490,12 +513,26 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .team-card:not(.flipped):hover .team-photo-wrap { border-color: var(--cyan); }
 .team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .team-name { font-size: .98rem; margin-bottom: .4rem; }
+
+/* Profile links (the "link" column of team.csv). The small arrow after the name
+   is the affordance: without it a plain-coloured name gives no sign it opens a
+   page. It is a mask, not an <img>, so it inherits colour on hover/focus. */
 .team-name-link {
   color: inherit; text-decoration: none;
-  border-bottom: 1px dotted var(--cyan);
-  transition: color .15s ease, border-color .15s ease;
+  transition: color .15s ease;
 }
-.team-name-link:hover, .team-name-link:focus-visible { color: var(--cyan); border-bottom-style: solid; }
+.team-name-link::after {
+  content: ""; display: inline-block;
+  width: .62em; height: .62em; margin-left: .3em;
+  vertical-align: baseline;
+  background-color: var(--cyan);
+  -webkit-mask: var(--icon-external) no-repeat center / contain;
+          mask: var(--icon-external) no-repeat center / contain;
+  transition: background-color .15s ease;
+}
+.team-name-link:hover, .team-name-link:focus-visible { color: var(--cyan); text-decoration: underline; }
+/* text-decoration would otherwise strike through the arrow */
+.team-name-link:hover::after, .team-name-link:focus-visible::after { text-decoration: none; }
 .team-role {
   display: inline-block; font-size: .62rem; font-weight: 700; letter-spacing: 0;
   text-transform: uppercase; color: var(--cyan); background: var(--cyan-soft);
