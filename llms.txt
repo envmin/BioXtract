@@ -8,7 +8,7 @@
 > chemical leaching.
 
 - **Website:** https://bioxtract.org
-- **Contact:** martyna.glodowska@ru.nl
+- **Contact:** contact@bioxtract.org
 - **Based in:** Nijmegen, Netherlands
 - **Parent institution:** Radboud University
 - **Funder:** SPRIN-D, the German Federal Agency for Disruptive Innovation, through the Tech Metal Transformation Challenge
@@ -60,7 +60,7 @@ Dr Suzanne Haaijer-Vroomen and Dr Stian Torset.
 
 BioXtract is advised by a Scientific Board (Dr James M. Byrne, University of Bristol;
 Dr Bonnie McDevitt, USGS; Dr Anna Potysz, University of Wrocław; Dr Jeremiah Shuster,
-University of Western Ontario; Dr Lucian Staicu, BGR; Dr Elizabeth J. Tomaszewski,
+University of Western Ontario; Dr Elizabeth J. Tomaszewski,
 USGS) and an Advisory Board (Prof. Dr Henning Prommer, University of Western
 Australia / Ekion; Prof. Dr Mario Zarroca Hernandez, Autonomous University of
 Barcelona).
