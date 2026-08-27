@@ -25,6 +25,13 @@
   --max:   1180px;
   --nav-h: 64px;
 
+  /* Email links get the conventional blue-and-underlined treatment rather than
+     the brand teal, which readers were not recognising as clickable. Two shades:
+     one for light cards, a lighter one for the dark footer. Both clear AA. */
+  --link:         #0d5bb5;
+  --link-hover:   #094a94;
+  --link-on-dark: #9ecbff;
+
   /* "Opens in a new window": the box-with-escaping-arrow convention. A bare
      diagonal arrow reads too much like the Mars symbol at this size. Used as a
      mask so it takes its colour from the link it sits next to. */
@@ -543,7 +550,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 }
 .team-affiliation { font-size: .82rem; color: var(--muted); line-height: 1.4; }
 .team-country { font-size: .77rem; color: var(--faint); margin-top: .12rem; }
-.team-email { display: inline-block; font-size: .78rem; color: var(--cyan); margin-top: .45rem; word-break: break-word; }
+.team-email { display: inline-block; font-size: .78rem; margin-top: .45rem; word-break: break-word; }
 .team-error { grid-column: 1 / -1; text-align: center; color: var(--muted); }
 
 /* Bio text on the build-generated static cards (see build.ps1). Browsers with JS
@@ -696,6 +703,21 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .form-status.is-error { color: #b02a2a; }
 .form-status.is-success { color: var(--cyan); }
 .form-card.is-sent .form-body { display: none; }
+
+/* Every email address on the site, wherever it appears. Placed last so it wins
+   the ties against .partner-contact a and .footer-col a, which are equally
+   specific and would otherwise keep their teal. */
+a[href^="mailto:"] {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a[href^="mailto:"]:hover,
+a[href^="mailto:"]:focus-visible { color: var(--link-hover); text-decoration-thickness: 2px; }
+.footer a[href^="mailto:"] { color: var(--link-on-dark); }
+.footer a[href^="mailto:"]:hover,
+.footer a[href^="mailto:"]:focus-visible { color: #fff; }
 
 @media (max-width: 860px) {
   .partner-layout { grid-template-columns: 1fr; gap: 2.25rem; }
