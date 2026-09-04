@@ -662,7 +662,11 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 
 /* Partner / get-in-touch page */
 .partner-layout {
-  display: grid; grid-template-columns: 1fr 1.05fr; gap: 3.5rem; align-items: start;
+  /* minmax(0, ...) rather than a bare fr: an fr track floors at min-content, and
+     the long LinkedIn URL pushed the track wider than the container, so both
+     columns hung 6px past the page edge (clipped, invisibly, by overflow-x). */
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 3.5rem; align-items: start;
 }
 .partner-info p { color: var(--muted); margin-bottom: 1.1rem; }
 .partner-info p:last-of-type { margin-bottom: 0; }
@@ -674,6 +678,30 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .partner-contact svg { width: 20px; height: 20px; color: var(--cyan); flex-shrink: 0; }
 .partner-contact a { color: var(--cyan); word-break: break-word; }
 .partner-contact a:hover { text-decoration: underline; }
+
+/* Street address: the contact rows are centred on their icon, but a three-line
+   address needs the icon pinned to the first line instead. */
+.partner-contact--address { align-items: flex-start; }
+.partner-contact--address svg { margin-top: .2rem; }
+.partner-contact address { font-style: normal; font-weight: 600; line-height: 1.5; }
+
+/* Map. aspect-ratio keeps it proportional at every width without a fixed height,
+   and the iframe is lazy so Google is only contacted if the visitor scrolls to it. */
+.partner-map {
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+  aspect-ratio: 16 / 10;
+}
+.partner-map iframe { display: block; width: 100%; height: 100%; border: 0; }
+.partner-map-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin-top: .7rem; font-size: .85rem; font-weight: 600; color: var(--cyan);
+}
+.partner-map-link:hover { text-decoration: underline; }
+.partner-map-link svg { width: 13px; height: 13px; }
 
 .form-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
@@ -720,7 +748,7 @@ a[href^="mailto:"]:focus-visible { color: var(--link-hover); text-decoration-thi
 .footer a[href^="mailto:"]:focus-visible { color: #fff; }
 
 @media (max-width: 860px) {
-  .partner-layout { grid-template-columns: 1fr; gap: 2.25rem; }
+  .partner-layout { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
 }
 @media (max-width: 460px) {
   .form-row.two { grid-template-columns: 1fr; gap: 0; }

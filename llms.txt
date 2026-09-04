@@ -9,7 +9,7 @@
 
 - **Website:** https://bioxtract.org
 - **Contact:** contact@bioxtract.org
-- **Based in:** Nijmegen, Netherlands
+- **Based in:** Heyendaalseweg 135, 6525 AJ Nijmegen, The Netherlands
 - **Parent institution:** Radboud University
 - **Funder:** SPRIN-D, the German Federal Agency for Disruptive Innovation, through the Tech Metal Transformation Challenge
 - **License:** content on this site may be quoted with attribution to BioXtract
@@ -60,10 +60,9 @@ Dr Suzanne Haaijer-Vroomen and Dr Stian Torset.
 
 BioXtract is advised by a Scientific Board (Dr James M. Byrne, University of Bristol;
 Dr Bonnie McDevitt, USGS; Dr Anna Potysz, University of Wrocław; Dr Jeremiah Shuster,
-University of Western Ontario; Dr Elizabeth J. Tomaszewski,
-USGS) and an Advisory Board (Prof. Dr Henning Prommer, University of Western
-Australia / Ekion; Prof. Dr Mario Zarroca Hernandez, Autonomous University of
-Barcelona).
+University of Western Ontario; Dr Elizabeth J. Tomaszewski, USGS) and an Advisory
+Board (Prof. Dr Henning Prommer, University of Western Australia / Ekion;
+Prof. Dr Mario Zarroca Hernandez, Autonomous University of Barcelona).
 
 The authoritative, always-current team list is published at
 https://bioxtract.org/content/team.csv and rendered at https://bioxtract.org/#team
