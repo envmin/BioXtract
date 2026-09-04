@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>document.documentElement.classList.add('has-js');</script>
-  <link rel="stylesheet" href="assets/css/style.css?v=d6ce5146">
+  <link rel="stylesheet" href="assets/css/style.css?v=6efc2436">
 
   <script type="application/ld+json">
   {
@@ -118,12 +118,24 @@
               </span>
             </div>
 
-            <div class="partner-map">
-              <iframe
-                src="https://www.google.com/maps?q=51.824148,5.867641&amp;hl=en&amp;z=15&amp;output=embed"
-                title="Map of the BioXtract location on Heyendaalseweg, Nijmegen"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen></iframe>
+            <!--
+              Click-to-load: nothing is requested from Google until the visitor
+              asks for the map, so no third-party cookies are set on arrival.
+              main.js swaps this placeholder for the iframe; without JS the
+              fallback link below opens the map on Google Maps instead.
+            -->
+            <div class="partner-map" id="map-embed"
+                 data-map-src="https://www.google.com/maps?q=51.824148,5.867641&amp;hl=en&amp;z=15&amp;output=embed">
+              <button type="button" class="map-consent map-consent--js" id="map-load">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="map-consent-title">Show the map</span>
+                <span class="map-consent-note">Loads Google Maps, which may set cookies.</span>
+              </button>
+              <a class="map-consent map-consent--nojs" href="https://maps.app.goo.gl/ZdKeJjpy45vP6AbA7" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="map-consent-title">Open the map</span>
+                <span class="map-consent-note">Opens Google Maps in a new tab.</span>
+              </a>
             </div>
             <a class="partner-map-link" href="https://maps.app.goo.gl/ZdKeJjpy45vP6AbA7" target="_blank" rel="noopener noreferrer">
               Open in Google Maps
@@ -237,7 +249,7 @@
   </button>
 
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-  <script src="assets/js/main.js?v=2f820725"></script>
+  <script src="assets/js/main.js?v=8dc6de52"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

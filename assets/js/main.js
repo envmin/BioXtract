@@ -347,6 +347,27 @@ function initPartnerForm() {
   });
 }
 
+// Map on the partner page. The Google embed is only inserted once the visitor
+// asks for it, so arriving on the page sets no third-party cookies.
+function initMapEmbed() {
+  const box = document.getElementById('map-embed');
+  const btn = box && box.querySelector('.map-consent--js');
+  if (!box || !btn) return;
+
+  btn.addEventListener('click', () => {
+    const src = box.getAttribute('data-map-src');
+    if (!src) return;
+    const frame = document.createElement('iframe');
+    frame.src = src;
+    frame.title = 'Map of the BioXtract location on Heyendaalseweg, Nijmegen';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    frame.allowFullscreen = true;
+    box.textContent = '';
+    box.appendChild(frame);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initScrollSpy();
@@ -355,5 +376,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFadeReveal();
   observeFadeUps();
   initPartnerForm();
+  initMapEmbed();
   loadTeam();
 });
