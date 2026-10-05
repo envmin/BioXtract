@@ -200,7 +200,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .hero { position: relative; min-height: 68vh; display: flex; align-items: center; overflow: hidden; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero-pcb.jpg') center/cover no-repeat;
   filter: saturate(.78) contrast(1.04);
 }
 .hero-bg::after {
@@ -255,6 +255,15 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
   box-shadow: var(--shadow-lg);
 }
 .split-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3.2; filter: saturate(.9) contrast(1.02); }
+
+/* Four lab photos as one block, same outer shape as a single image. The images
+   keep their own square-ish crop; the 1px gap lets the dark page show through
+   as a hairline between them. */
+.split-media--grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  aspect-ratio: 4 / 3.2;
+}
+.split-media--grid img { aspect-ratio: auto; height: 100%; }
 .split-media .tag {
   position: absolute; left: 1rem; bottom: 1rem;
   background: rgba(11,31,29,.82); color: #fff; backdrop-filter: blur(6px);
@@ -660,14 +669,44 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: 0; color: var(--dark); font-
 .page-head .h2 { margin-bottom: 0; }
 .page-intro { color: var(--muted); font-size: 1.05rem; line-height: 1.6; margin-top: .9rem; }
 
-/* Partner / get-in-touch page */
-.partner-layout {
-  /* minmax(0, ...) rather than a bare fr: an fr track floors at min-content, and
-     the long LinkedIn URL pushed the track wider than the container, so both
-     columns hung 6px past the page edge (clipped, invisibly, by overflow-x). */
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 3.5rem; align-items: start;
+/* Photo under a page heading (team group shot) and the one beside the contact
+   details. Same rounded, shadowed treatment as the home-page section images. */
+.page-media, .partner-photo {
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg);
 }
+.page-media { margin-bottom: 3rem; }
+/* Banner crop: at full width the untouched 3:2 photo is ~740px tall and pushes
+   the team itself below the fold. 16/9 trims about 8% off the top and bottom. */
+.page-media img {
+  width: 100%; height: 100%; display: block;
+  aspect-ratio: 16 / 9; object-fit: cover; object-position: center;
+  filter: saturate(.9) contrast(1.02);
+}
+.partner-photo { margin-top: 0; }
+/* The only upright photo in the set, cropped tight to the researcher: it shows
+   21% to 61% of the photo, so it sits level with the heading beside it. */
+.partner-photo img {
+  width: 100%; height: 320px; display: block;
+  object-fit: cover; object-position: center 35%;
+  filter: saturate(.9) contrast(1.02);
+}
+
+/* Partner / get-in-touch page */
+/* One grid for the whole page: heading top-left, photo top-right, details and
+   form below. minmax(0, ...) rather than a bare fr - an fr track floors at
+   min-content, and the long LinkedIn URL pushed the track wider than the
+   container, so both columns hung 6px past the page edge. */
+.partner-page {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  grid-template-areas:
+    "head  photo"
+    "info  form";
+  column-gap: 3.5rem; row-gap: 2.5rem; align-items: start;
+}
+.partner-page > .page-head     { grid-area: head; max-width: none; margin-bottom: 0; }
+.partner-page > .partner-photo { grid-area: photo; }
+.partner-page > .partner-info  { grid-area: info; }
+.partner-page > .form-card     { grid-area: form; }
 .partner-info p { color: var(--muted); margin-bottom: 1.1rem; }
 .partner-info p:last-of-type { margin-bottom: 0; }
 .partner-contacts {
@@ -772,7 +811,17 @@ a[href^="mailto:"]:focus-visible { color: var(--link-hover); text-decoration-thi
 .footer a[href^="mailto:"]:focus-visible { color: #fff; }
 
 @media (max-width: 860px) {
-  .partner-layout { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .partner-page {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: none;
+    gap: 2.25rem;
+  }
+  /* on a phone the photo drops below the contact details */
+  .partner-page > .page-head     { grid-area: auto; order: 1; }
+  .partner-page > .partner-info  { grid-area: auto; order: 2; }
+  .partner-page > .partner-photo { grid-area: auto; order: 3; }
+  .partner-page > .form-card     { grid-area: auto; order: 4; }
+  .partner-photo img { height: 420px; }
 }
 @media (max-width: 460px) {
   .form-row.two { grid-template-columns: 1fr; gap: 0; }

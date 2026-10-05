@@ -8,7 +8,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://bioxtract.org/assets/images/hero-bg.jpg</image:loc>
+      <image:loc>https://bioxtract.org/assets/images/hero-pcb.jpg</image:loc>
       <image:title>Recovering critical metals from waste using precision biogeochemistry</image:title>
     </image:image>
     <image:image>
@@ -16,8 +16,8 @@
       <image:title>Mixed electronic waste and circuit-board materials</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://bioxtract.org/assets/images/approach-lab.jpg</image:loc>
-      <image:title>BioXtract microbial metal recovery in the laboratory</image:title>
+      <image:loc>https://bioxtract.org/assets/images/lab-4.jpg</image:loc>
+      <image:title>Culture flasks with metal-bearing samples in the BioXtract laboratory</image:title>
     </image:image>
   </url>
 
