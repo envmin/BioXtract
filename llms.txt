@@ -27,7 +27,7 @@ Beyond recovery, the platform is designed for *directed metal transformation*: w
 can become a route to functional precursors for permanent magnets, luminescent
 materials and other high-value applications.
 
-## The platform: four stages, modular by design
+## The platform: four stages, modular design
 
 1. **Pre-treatment**. E-waste and PCBs need only minor pre-treatment, keeping energy
    costs and waste low.
